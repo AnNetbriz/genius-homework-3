@@ -216,50 +216,82 @@ ul {
 /* фон волна */
 .choose {
   position: relative;
-  overflow: hidden;
   padding-top: 200px; /* отступ под волну */
-  padding-bottom: 120px;
+  padding-bottom: 48px;
 }
-.choose-bg {
-  position: absolute;
-  top: -190px; /* поднимаем волну */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1440px; /* под max width сайта */
-  height: 1785px; /* под высоту волны */
-  background-image: url("../images/wave.png");
+.background-wave {
+  background-image: url("../images/background-choose.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center 200px;
+  background-position: top center;
+  width: 100%;
+  padding-top: 60px;
 }
 
 /* procedures */
+.procedures-img {
+  position: absolute; /* картинка під текстом */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* щоб картинка не спотворювалась */
+  z-index: 1;
+}
 .procedures-container {
   display: flex;
   gap: 32px;
   align-items: center;
+  justify-content: center;
 }
 .procedures-item {
   flex-basis: calc((100%-32px) / 3);
 }
 
 .procedures-card {
-  border: 1px solid #dfe7f3; /* remove */
-  background-image: linear-gradient(
+  position: relative; /* для абсолютного накладення */
+  width: 344px;
+  height: 456px;
+  border-radius: 4px 120px 4px 120px;
+  overflow: hidden; /* щоб картинка не виходила за межі */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* текст внизу */
+  gap: 16px;
+  padding: 16px;
+  transition: transform 0.2s;
+}
+.procedures-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
     180deg,
     rgba(1, 28, 68, 0) 47.4%,
     rgba(1, 28, 68, 0.73) 82.66%,
     var(--color-brend-dark) 99.06%
   );
-  border-radius: 120px 4px;
-  width: 344px;
-  height: 456px;
-  padding-top: 372px; /* сверху */
-  padding-right: 77px; /* справа */
-  padding-bottom: 32px; /* снизу */
-  padding-left: 115px; /* слева */
-  transition: transform 0.2s;
+  pointer-events: none;
+  z-index: 2; /* поверх картинки, під текстом */
 }
+.procedures-card h3 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffffff;
+
+  margin: 0;
+  text-align: center;
+  z-index: 3;
+  width: 100%; /* текст займає всю ширину картки */
+  white-space: normal; /* дозволяє перенос рядків */
+}
+
 .procedures-card:hover {
   transform: scale(1.05);
 }
@@ -271,7 +303,7 @@ ul {
   font-size: 22px;
   line-height: 1.18;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .button-primary:hover {
@@ -367,10 +399,10 @@ ul {
 .footer::after {
   background-image: url("../images/pexels.png");
   position: absolute;
-  width: 278px;
-  height: 213px;
-  bottom: -21%;
-  right: -2%;
+  width: 246px;
+  height: 152px;
+  bottom: 0;
+  right: 0%;
   background-repeat: no-repeat;
   content: "";
 }
@@ -558,7 +590,6 @@ ul {
   position: relative;
   width: 500px;
   height: 695px;
-  gap: 40px;
 }
 .section-title {
   color: var(--color-brend-dark);
@@ -592,8 +623,6 @@ ul {
   width: 327px; /* розмір фото */
   height: 327px;
   border-radius: 50%;
-  object-fit: cover;
-  position: absolute;
 }
 
 .photo-after {
@@ -632,6 +661,7 @@ ul {
   padding-bottom: 95px;
 }
 .find-us-container {
+  justify-content: center;
   display: flex;
   gap: 32px;
   margin-bottom: 48px; /* новое */
