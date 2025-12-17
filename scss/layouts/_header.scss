@@ -1,0 +1,96 @@
+.header {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: none;
+
+  @media screen and (min-width: $bp-desktop) {
+    backdrop-filter: blur(10px);
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 16px 0 25px;
+
+    @media screen and (min-width: $bp-desktop) {
+      padding: 32px 0;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  &__menu {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+      gap: 56px;
+    }
+  }
+
+  &__icons {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+  }
+
+  &__item {
+    margin-right: 56px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__adress-icon {
+    fill: var(--color-brend-dark);
+  }
+
+  &__burger {
+    display: block;
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    fill: var(--color-brend-light);
+    border: none;
+    outline: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: none;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* фон фото */
+.hero-background {
+  background-image: url("../images/fonsecondwave.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 0.4px 0 12.67px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url("../images/fonsecondwave@2x.png");
+  }
+}

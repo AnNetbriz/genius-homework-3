@@ -1,0 +1,100 @@
+.procedures {
+  padding: 48px 0;
+
+  &__title {
+    margin-bottom: 48px;
+  }
+
+  &__container {
+    overflow: hidden;
+  }
+
+  &__list {
+    margin-bottom: 32px;
+  }
+
+  &__slider {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  &__button {
+    display: none;
+  }
+
+
+  .procedures-card {
+    position: relative;
+    flex: 0 0 calc(100% - 40px);
+    max-width: calc(100% - 40px);
+    height: 456px;
+    margin: 0 auto;
+    border-radius: 4px 120px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(1, 28, 68, 0) 50%,
+        rgba(1, 28, 68, 0.7) 85%,
+        #011c44 100%
+      );
+      z-index: 1;
+    }
+
+    h3 {
+      position: absolute;
+      bottom: 24px;
+      z-index: 2;
+      margin: 0;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+  }
+
+  .button-primary:hover {
+    color: var(--color-brend-dark);
+    background-color: transparent;
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    display: flex;
+
+    &__slider {
+      padding: 0;
+      gap: 16px;
+    }
+
+    .procedures-card {
+      flex: 0 0 auto;
+      max-width: none;
+      margin: 0;
+
+      h3 {
+        font-size: 22px;
+      }
+    }
+
+    &__button {
+      display: block;
+    }
+  }
+}

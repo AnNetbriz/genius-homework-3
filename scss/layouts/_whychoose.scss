@@ -1,0 +1,102 @@
+.choose {
+  position: relative;
+  padding-top: 104px;
+
+  &__title {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &__why-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 0;
+    color: #000;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+}
+
+.why-card {
+  width: 316px;
+  height: 181px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 32px;
+  background-color: var(--color-brend-light);
+  border-radius: 32px;
+  box-shadow: 0 4px 4px rgba(168, 198, 245, 0.38);
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.why-card__text {
+  margin: 0;
+  text-align: center;
+}
+
+.why-icon {
+  width: 48px;
+  height: 48px;
+  fill: var(--color-brend);
+  background-color: var(--color-brend-light);
+  border-radius: 50%;
+}
+
+
+
+.section-title {
+  max-width: 360px;
+  margin: 0 auto 24px;
+  color: var(--color-brend-dark);
+  font-family: "Play", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+
+
+.background-wave {
+  width: 100%;
+  padding-top: 50px;
+  background-image: url("../images/background-choose.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+
+
+@media screen and (min-width: $bp-desktop) {
+  .choose {
+    padding-top: 150px;
+    padding-bottom: 48px;
+
+    &__title {
+      margin-bottom: 48px;
+      text-align: left;
+    }
+
+    &__why-list {
+      flex-direction: row;
+      gap: 56px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .section-title {
+    max-width: 600px;
+    font-size: 64px;
+  }
+}
+

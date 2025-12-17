@@ -1,5 +1,5 @@
 .button-primary {
-  padding: 16px 32px;
+  padding: 16px 30px;
   color: #ffffff;
   background-color: var(--color-brend);
   border-radius: 32px;
@@ -9,12 +9,16 @@
   font-size: 18px;
   font-weight: 600;
   line-height: 1;
-  margin-bottom: 14px;
-}
-/* disabled */
-.button-primary :disabled {
-  color: gray;
-  background-color: lightgray;
-  cursor: not-allowed;
-  border-color: currentColor;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding: 16px 32px;
+    margin-bottom: 14px;
+  }
+
+  &:disabled {
+    color: gray;
+    background-color: lightgray;
+    cursor: not-allowed;
+    border-color: currentColor;
+  }
 }

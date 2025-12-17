@@ -3,29 +3,39 @@
 @import "./utils/variables";
 
 @import "./base";
+@import "./utils/texts";
+
+@import "./layouts/headeritems";
+
+@import "./components/transformimages";
 
 @import "./utils/utils";
 
+@import "./components/input";
+
 @import "./components/buttons";
 
-@import "./components/whychoose";
+@import "./layouts/whychoose";
 
-@import "./components/ourprocedures";
+@import "./layouts/ourprocedures";
 
 @import "./components/links";
 
-@import "./components/footer";
+@import "./layouts/footer";
 
-@import "./components/header";
+@import "./layouts/header";
 
-@import "./components/hero";
+@import "./layouts/hero";
 
 @import "./components/carousel";
 
-@import "./components/transform";
+@import "./layouts/transform";
 
-@import "./components/findus";
+@import "./layouts/findus";
 
-@import "./components/modalwindow";
+@import "./layouts/modalwindow";
 
-@import "./components/form";
+@import "./components/form-terms";
+
+@import "./layouts/mobile-menu";
+@import "./components/pagination";
